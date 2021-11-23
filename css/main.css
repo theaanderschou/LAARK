@@ -1,7 +1,90 @@
+/* Color and Fonts */
 :root {
-    --off-white: #f4f4f4;
+    --marble: #f4f4f4;
     --midnight: ##1B273A;
     --oaktree: ##C5A686;
-/*    --light: #ffffff;
-    /* #1d84fc */
 }
+
+/*::selection {
+    background: var(--off-white);
+    color: var(--midnight);
+}*/
+
+@font-face {
+    font-family: nimbus-extd;
+    /*src: url(../fonts/Graphik-Regular.otf);*/
+}
+
+@font-face {
+    font-family: nimbus-reg;
+    /*src: url(../fonts/Graphik-Regular.otf);*/
+}
+
+/* FUNDAMENTALS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: --marble;
+    scroll-behavior: smooth;
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+body,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+div,
+span {
+    margin: 0;
+    padding: 0;
+    /*font-family: "graphik", sans-serif;*/
+    text-decoration: none;
+    color: var(--midnight);
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--oaktree);
+}
+
+h1 {
+    font-family: nimnbus-extd;
+    font-size: clamp(1.5rem, 2.5vw, 2rem); 
+}
+
+h2 {
+    font-family: nimnbus-extd;
+    font-size: clamp(1.5rem, 1.5vw, 2.5rem); 
+}
+
+h3 {
+    font-family: nimnbus-extd;
+    font-size: clamp(1rem, 1.0vw, 1.7rem); 
+}
+
+p {
+    font-family: nimnbus-reg;
+    font-size: clamp(1rem, 1.2vw, 1.5rem); 
+}
+
+
