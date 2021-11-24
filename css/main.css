@@ -95,7 +95,7 @@ nav {
 .nav-logo {
     margin-left: 120px;
     position: relative;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
 }
 
@@ -109,7 +109,7 @@ nav {
     width: 50%;
     display: flex;
     position: relative;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     float: right;
     letter-spacing: 3px;
 }
@@ -117,4 +117,8 @@ nav {
 .navlinks a {
     color: var(--marble);
     text-transform: uppercase;
+}
+
+.navlinks a:hover {
+font-weight: 600;
 }
