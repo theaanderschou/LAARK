@@ -1,23 +1,8 @@
 /* Color and Fonts */
 :root {
     --marble: #f4f4f4;
-    --midnight: ##1B273A;
-    --oaktree: ##C5A686;
-}
-
-/*::selection {
-    background: var(--off-white);
-    color: var(--midnight);
-}*/
-
-@font-face {
-    font-family: nimbus-extd;
-    /*src: url(../fonts/Graphik-Regular.otf);*/
-}
-
-@font-face {
-    font-family: nimbus-reg;
-    /*src: url(../fonts/Graphik-Regular.otf);*/
+    --midnight: #1B273A;
+    --oaktree: #C5A686;
 }
 
 /* FUNDAMENTALS */
@@ -33,7 +18,7 @@ html {
 }
 
 body {
-    background: --marble;
+    background: var(--midnight);
     scroll-behavior: smooth;
     line-height: 1.65;
     overflow-x: hidden;
@@ -55,36 +40,81 @@ div,
 span {
     margin: 0;
     padding: 0;
-    /*font-family: "graphik", sans-serif;*/
     text-decoration: none;
     color: var(--midnight);
     list-style: none;
 }
 
 a {
-    text-decoration: none;
     cursor: pointer;
-    color: var(--oaktree);
+    font-family: nimbus-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(.8rem, 1vw, 1rem);
 }
 
 h1 {
-    font-family: nimnbus-extd;
+    font-family: nimbus-sans-extended, sans-serif;
+    font-weight: 900;
+    font-style: normal;
     font-size: clamp(1.5rem, 2.5vw, 2rem); 
 }
 
 h2 {
-    font-family: nimnbus-extd;
+    font-family: nimbus-sans-extended, sans-serif;
+    font-weight: 900;
+    font-style: normal;
     font-size: clamp(1.5rem, 1.5vw, 2.5rem); 
 }
 
 h3 {
-    font-family: nimnbus-extd;
+    font-family: nimbus-sans-extended, sans-serif;
+    font-weight: 900;
+    font-style: normal;
     font-size: clamp(1rem, 1.0vw, 1.7rem); 
 }
 
 p {
-    font-family: nimnbus-reg;
-    font-size: clamp(1rem, 1.2vw, 1.5rem); 
+    font-family: nimbus-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(.8rem, 1vw, 1rem);
 }
 
 
+
+/* NAV */
+nav {
+    height: 120px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 5;
+}
+
+.nav-logo {
+    margin-left: 120px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-logo img {
+    width: 110px;
+}
+
+.navlinks {
+    margin-right: 120px;
+    justify-content: space-between;
+    width: 50%;
+    display: flex;
+    position: relative;
+    transform: translateY(-50%);
+    float: right;
+    letter-spacing: 3px;
+}
+
+.navlinks a {
+    color: var(--marble);
+    text-transform: uppercase;
+}
