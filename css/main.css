@@ -214,7 +214,6 @@ nav {
         position: relative;
         padding: 2vh 0;
         top: 120px;
-
     }
 
     .burger1 li, .burger2 li {
@@ -233,7 +232,6 @@ nav {
 
     .burger1 li {
         height: 11vh;
-        padding-bottom: -20px;
     }
 
     .burger1 a {
@@ -357,17 +355,95 @@ nav {
     }
 
   }
-  /*
-  @media only screen and (max-width: 1000px) {
-    .burger {
-      margin-right: 12%;
-  }
+
+  @media only screen and (max-width: 1280px) {
+    .headline h3 {
+        padding: 0px 0 0px 0;
+    }
+    
+    .burger-some {
+        margin: 20px 0;
+    }
   }
   
-  @media only screen and (max-width: 500px) {
-    .nav-active {
+  @media only screen and (max-width: 700px) {
+    .nav-logo {
+        margin-left: 40px;
+    }
+    
+    .burger {
+        margin-right: 40px;
+    }
+
+    .burger1, .burger2 {
         width: 100%;
+        height: auto;
+        padding: 5vh 0;
+        top: 100px;
+    }
+
+    .burger2 {
+        top: 50px;
+    }
+
+    .burger1 a {
+        text-align: center;
+    }
+
+    .burger1 li {
+        height: 5vh;
+    }
+
+    .burger2 a, .burger2 p, .headline h3 {
+        text-align: center;
+    }
+
+    .burger-some {
+        margin: 60px 0;
+    }
+
+    .somelinks {
+        position: absolute;
+        left: 13%;
+        transform: translateX(-50%);
+        margin-bottom: 5px;
+    }
+
+    .burgertekst {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #newsletter {
+        width: 40vw;
+    }
+
+    .news-input {
+        position: absolute;
+        left: 10%;
+        transform: translateX(-50%);
+    }
+
+    .news-btn {
+        position: absolute;
+        left: 140%;
+        transform: translateX(-50%);
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    .burger1 li, .burger2 li {
+        width: 45%;
+    }
+  }
+
+  @media only screen and (max-width: 3600px) {
+    .burger1 li, .burger2 li {
+        width: 40%;
     }
   }
   /* END OF NAV SECTION */
+
+  
   
