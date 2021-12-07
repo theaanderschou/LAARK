@@ -203,7 +203,7 @@ nav {
         position: absolute;
         right: 0;
         top: 55%;
-        transform: translateY(-55%);
+        transform: translateY(-65%);
         transition: all 0.5s ease-in-out;
     }
 
@@ -229,12 +229,11 @@ nav {
     .burger1 {
         float: left;
         text-transform: uppercase;
-        background-color: green;
     }
 
     .burger1 li {
         height: 11vh;
-        background-color: teal;
+        padding-bottom: -20px;
     }
 
     .burger1 a {
@@ -244,13 +243,10 @@ nav {
 
     .burger2 {
         float: right;
-        background-color: pink;
     }
 
     .burger2 li {
         height: 3vh;
-        background-color: orange;
-
     }
 
     .burger2 a {
@@ -274,6 +270,11 @@ nav {
 
     .somelink img {
         margin: 0 15px 0 0;
+        width: 30px;
+    }
+
+    .somelink:hover {
+        opacity: .6;
     }
 
     .burgertekst {
@@ -284,6 +285,19 @@ nav {
         color: var(--marble);
     }
 
+    .burger1 li:hover a {
+        border-bottom: 4px solid var(--marble);
+        width: 30%;
+        position: absolute;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+        font-size: clamp(4.5rem, 6vw, 6.5rem);
+    }
+
+    .burger2 li:hover a {
+        font-weight: 600;
+    }
+  
     .news-input {
         width: 50px;
         margin: 10px 0 0 120px;
@@ -291,24 +305,16 @@ nav {
     }
 
     input {
-        margin: 5px 0;
+        margin: 5px 0 10px 0 ;
     }
 
-    .burger1 li:hover a {
-        /* ?? */
-    }
-
-    .burger2 li:hover a {
-        font-weight: 600;
-    }
-  
     #newsletter {
         height: 30px;
         padding-left: 8px;
-        width: 250px;
+        width: 15vw;
     }
 
-    #news-btn {
+    .news-btn {
        background-color: var(--oaktree);
        border: none;
        color: var(--marble);
@@ -316,10 +322,15 @@ nav {
        height: 30px;
     }
 
-    @keyframes navLinkFade {
+    .news-btn:hover {
+        background-color: #a38e78;
+        font-weight: bold;
+     }
+
+/*    @keyframes navLinkFade {
         from {
             opacity: 0;
-            transform: translateX(50px);
+            transform: translateX(100px);
         }
   
         to {
@@ -327,7 +338,7 @@ nav {
             transform: translateX(0px);
         }
     }
-
+*/
     .burger.toggle {
         width: 25px;
     }
