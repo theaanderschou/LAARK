@@ -212,7 +212,7 @@ nav {
         width: 50%;
         height: 100vh;
         position: relative;
-        padding: 60px 0;
+        padding: 2vh 0;
         top: 120px;
 
     }
@@ -237,7 +237,7 @@ nav {
     }
 
     .burger1 a {
-        font-size: clamp(3rem, 4.5vw, 5rem);
+        font-size: clamp(1rem, 2.5vw, 5rem);
         font-weight: 600;
     }
 
