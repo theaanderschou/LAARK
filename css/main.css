@@ -92,6 +92,7 @@ button {
     padding: 3px 5px;
     transition: .2s;
     cursor: pointer;
+    background: transparent;
 }
 
 button:hover {
@@ -581,8 +582,8 @@ nav {
 /* START OF PROJECTS */
 
 #projects {
-    background: var(--marble);
-    padding: 120px 120px 0;
+    background: #FFF;
+    padding: 120px 120px 1px;
 }
 
 #projects button {
@@ -669,9 +670,69 @@ nav {
     bottom: 0;
 }
 
-
-
-
-
-
 /* END OF PROJECTS */
+
+/* START OF TESTIMONIALS */
+#testimonials {
+    min-height: 100vh;
+    background: var(--marble);
+    position: relative;
+    margin: 120px;
+}
+
+.testimonial-image {
+    width: calc(50% - 120px);
+    height: 60vh;
+    background: red;
+    position: absolute;
+}
+
+.testimonial-quote {
+    width: 50%;
+    height: 60vh;
+    background: darkblue;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+}
+
+#testimonial-belt {
+    width: 300%;
+    height: 100%;
+    background: green;
+    transform: translateX(0%);
+    transition: .5s ease-in-out;
+}
+
+.testimonial-arrow {
+    width: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 10;
+}
+
+#testimonial-arrow-right {
+    right: 0;
+}
+
+.testimonial-part {
+    width: 33.33%;
+    position: relative;
+    height: 100%;
+    float: left;
+}
+
+.testimonial-1 {
+    background: red;
+}
+
+.testimonial-2 {
+    background: yellow;
+}
+
+.testimonial-3 {
+    background: green;
+}
+
+/* END OF TESTIMONIALS */

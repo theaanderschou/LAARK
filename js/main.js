@@ -71,3 +71,27 @@ window.addEventListener('scroll', function () {
         menuLogo.src = "./img/logo/laark-logo-marble.png";
     }
 });
+
+
+
+
+
+
+// Testimonial slider
+
+var testiBelt = document.getElementById("testimonial-belt");
+var rightTestiArrow = document.getElementById("testimonial-arrow-right");
+var leftTestiArrow = document.getElementById("testimonial-arrow-left");
+
+
+rightTestiArrow.addEventListener('click', function () {
+    if (testiBelt.style != "translateX(0%)") {
+        rightTestiArrow.addEventListener('click', function () {
+            testiBelt.style.transform = "translateX(-33.33%)";
+            console.log("Den var 0");
+        });
+    } else if (testiBelt.style != "translateX(-33.33%)") {
+        testiBelt.style.transform = "translateX(-66.66%)";
+        console.log("Den var -33");
+    }
+});
