@@ -32,7 +32,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
@@ -41,20 +41,21 @@
     <meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Lottie 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <lottie-player src="/Users/theakroghanderschou/Documents/GitHub/LAARK/laark-lottie-logo.json" background="#ffffff"  speed="1"  style="width: 300px; height: 300px;" hover loop controls autoplay></lottie-player>
--->
+
+
 </head>
+
 <body>
 
-<nav>
+    <nav id="nav">
 
-    <div class="nav-logo">
-        <img src="./img/logo/laark-logo-marble.png" alt="LAARK Logo">
-    </div>
+        <a href="index.html">
+            <div id="nav-logo">
+                <img src="./img/logo/laark-logo-marble.png" alt="LAARK Logo">
+            </div>
+        </a>
 
-    <ul class="navlinks1">
+        <ul class="navlinks1">
             <li>
                 <a href="">Forside</a>
             </li>
@@ -73,56 +74,56 @@
             <li>
                 <a href="">Kontakt</a>
             </li>
-    </ul>
+        </ul>
 
-    <ul class="navlinks2">
-        <div class="burger1">
-            <li>
-                <a href="">Forside</a>
-            </li>
-            <li>
-                <a href="">Projekter</a>
-            </li>
-            <li>
-                <a href="">Tegnestuen</a>
-            </li>
-            <li>
-                <a href="">Teamet</a>
-            </li>
-            <li>
-                <a href="">Karriere</a>
-            </li>
-            <li>
-                <a href="">Kontakt</a>
-            </li>
-        </div>
-
-        <div class="burger2">
-            <div class="burger-proj">
-                <li class="headline">
-                    <a href="#projects.html">
-                        <h3>Projekter</h3>
-                    </a>
+        <ul class="navlinks2">
+            <div class="burger1">
+                <li>
+                    <a href="">Forside</a>
                 </li>
-                <li class="sublink">
-                    <a href="#education.html">Skole & Læring</a>
+                <li>
+                    <a href="">Projekter</a>
                 </li>
-                <li class="sublink">
-                    <a href="#health.html">Sundhedssektor</a>
+                <li>
+                    <a href="">Tegnestuen</a>
                 </li>
-                <li class="sublink">
-                    <a href="#transformation.html">Transformationsbyggeri</a>
+                <li>
+                    <a href="">Teamet</a>
                 </li>
-                <li class="sublink">
-                    <a href="#housing.html">Boligudvikling</a>
+                <li>
+                    <a href="">Karriere</a>
+                </li>
+                <li>
+                    <a href="">Kontakt</a>
                 </li>
             </div>
 
-            <div class="burger-some">
+            <div class="burger2">
+                <div class="burger-proj">
+                    <li class="headline">
+                        <a href="#projects.html">
+                            <h3>Projekter</h3>
+                        </a>
+                    </li>
+                    <li class="sublink">
+                        <a href="#education.html">Skole & Læring</a>
+                    </li>
+                    <li class="sublink">
+                        <a href="#health.html">Sundhedssektor</a>
+                    </li>
+                    <li class="sublink">
+                        <a href="#transformation.html">Transformationsbyggeri</a>
+                    </li>
+                    <li class="sublink">
+                        <a href="#housing.html">Boligudvikling</a>
+                    </li>
+                </div>
+
+                <div class="burger-some">
                     <li class="headline">
                         <h3>Sociale Medier</h3>
                     </li>
-                <div class="somelinks">
+                    <div class="somelinks">
                         <a href="https://www.linkedin.com/company/laark-laungaard-arkitekter/?originalSubdomain=dk" class="somelink">
                             <img src="./img/icons/lin.png" alt="LinkedIn">
                         </a>
@@ -134,50 +135,130 @@
                         <a href="https://www.facebook.com/LAARK-Laungaard-Arkitekter-440425956117761/" class="somelink">
                             <img src="./img/icons/fb.png" alt="Facebook">
                         </a>
+                    </div>
+
+                </div>
+
+                <div class="burger-news">
+                    <li class="headline">
+                        <h3>Nyhedsbrev</h3>
+                        <div class="burgertekst">
+                            <p>Har du lyst til at få de nyeste nyheder om vores igangværende
+                                projekter og vores team, så tilmeld dig vores nyhedsbrev:
+                            </p>
+                        </div>
+                    </li>
+
+                    <div class="news-input">
+                        <input type="text" name="newsletter" id="newsletter" placeholder="Email">
+                        <a href=""><input class="news-btn" type="submit" value="Tilmeld"></a>
+                    </div>
+
                 </div>
 
             </div>
+        </ul>
 
-            <div class="burger-news">
-                <li class="headline">
-                    <h3>Nyhedsbrev</h3>
-                    <div class="burgertekst">
-                        <p>Har du lyst til at få de nyeste nyheder om vores igangværende 
-                            projekter og vores team, så tilmeld dig vores nyhedsbrev:
-                        </p>
-                    </div>
-                </li>
+        <div class="burger">
+            <div class="border"></div>
+        </div>
 
-                <div class="news-input">
-                    <input type="text" name="newsletter" id="newsletter" placeholder="Email">
-                    <a href=""><input class="news-btn" type="submit" value="Tilmeld"></a>                
+    </nav>
+
+
+    <section id="hero">
+
+        <lottie-player id="laark-lottie" src="lottie/laark-lottie-logo.json" style="width: 250px;" autoplay alt="LAARK - Laungaard Arkitekter"></lottie-player>
+
+        <a href="#projects"><img class="arrow-down" src="img/icons/arrow-down.svg"></a>
+
+    </section>
+
+    <section id="projects">
+
+        <section class="project-left">
+
+            <div class="project-image">
+                <img src="img/arch/hallway.jpg">
+            </div>
+
+            <div class="project-text">
+                <h2>Nobis</h2>
+                <h3>HF-Centeret Efterslægten</h3>
+                <div class="text-columns-2">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </div>
+                <button>Se mere</button>
+            </div>
 
-        </div>
+            <div class="end-line"></div>
 
-        </div>
-    </ul>
+        </section>
 
-    <div class="burger">
-        <div class="border"></div>
-    </div>
+        <section class="project-right">
 
-</nav>
+            <div class="project-image">
+                <img src="img/arch/hallway.jpg">
+            </div>
 
+            <div class="project-text">
+                <h2>KVUC, Aula</h2>
+                <h3>KØbenhavns vuc</h3>
+                <div class="text-columns-2">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <button>Se mere</button>
+            </div>
 
-<section id="hero">
-    <div class="hero">
-        <img src="./img/hero/nobis-hero.png" alt="">
-        <img src="./img/hero/nobis-hero.png" alt="">
+            <div class="end-line"></div>
 
-    </div>
+        </section>
 
-    
-</section>
+        <section class="project-left">
+
+            <div class="project-image">
+                <img src="img/arch/hallway.jpg">
+            </div>
+
+            <div class="project-text">
+                <h2>Nobis</h2>
+                <h3>HF-Centeret Efterslægten</h3>
+                <div class="text-columns-2">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <button>Se mere</button>
+            </div>
+
+            <div class="end-line"></div>
+
+        </section>
+
+        <section class="project-right">
+
+            <div class="project-image">
+                <img src="img/arch/hallway.jpg">
+            </div>
+
+            <div class="project-text">
+                <h2>KVUC, Aula</h2>
+                <h3>KØbenhavns vuc</h3>
+                <div class="text-columns-2">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <button>Se mere</button>
+            </div>
+
+            <div class="end-line"></div>
+
+        </section>
+
+    </section>
 
 
 
 </body>
+
 </html>
 
 <script src="js/main.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
