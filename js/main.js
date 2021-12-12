@@ -79,19 +79,59 @@ window.addEventListener('scroll', function () {
 
 // Testimonial slider
 
-var testiBelt = document.getElementById("testimonial-belt");
-var rightTestiArrow = document.getElementById("testimonial-arrow-right");
-var leftTestiArrow = document.getElementById("testimonial-arrow-left");
+var testimonialBelt = document.getElementById("testimonial-belt");
+var rightTestimonialArrow = document.getElementById("testimonial-arrow-right");
+var leftTestimonialArrow = document.getElementById("testimonial-arrow-left");
 
+slidePos = 0;
 
-rightTestiArrow.addEventListener('click', function () {
-    if (testiBelt.style != "translateX(0%)") {
-        rightTestiArrow.addEventListener('click', function () {
-            testiBelt.style.transform = "translateX(-33.33%)";
-            console.log("Den var 0");
-        });
-    } else if (testiBelt.style != "translateX(-33.33%)") {
-        testiBelt.style.transform = "translateX(-66.66%)";
-        console.log("Den var -33");
-    }
+rightTestimonialArrow.addEventListener('click', function () {
+    // Subtract from the value of slidePos
+    slidePos -= 33.33;
+    // Set belt transformX to slidePos value + %
+    testimonialBelt.style.transform = "translateX(" + slidePos + "%)";
+
+    stopSlider()
 });
+
+leftTestimonialArrow.addEventListener('click', function () {
+    // Add to the value of slidePos
+    slidePos += 33.33;
+    // Set belt transformX to slidePos value + %
+    testimonialBelt.style.transform = "translateX(" + slidePos + "%)";
+
+    stopSlider()
+});
+
+function stopSlider() {
+    if (testimonialBelt.style.transform == "translateX(33.33%)") {
+        console.log("Du kan ikke komme længere tilbage");
+        slidePos = 0;
+        testimonialBelt.style.transform = "translateX(" + slidePos + "%)";
+        highlightCarouselDots()
+
+    } else if ((testimonialBelt.style.transform == "translateX(-99.99%)")) {
+        console.log("Du kan ikke komme længere frem");
+        slidePos = -66.66;
+        testimonialBelt.style.transform = "translateX(" + slidePos + "%)";
+        highlightCarouselDots()
+    }
+}
+
+var carouselDot = document.querySelectorAll(".carousel-dot")
+for (let i = 0; i < carouselDot.length; i++) {
+    carouselDot[i].addEventListener('click', function () {
+        testimonialBelt.style.transform = "translateX(" + i * -33.33 + "%)";
+        highlightCarouselDots()
+    });
+}
+
+function highlightCarouselDots() {
+    if (testimonialBelt.style.transform == "translateX(0%)") {
+        carouselDot[0].classList.add("active");
+    } else if (testimonialBelt.style.transform == "translateX(-33.33%)") {
+        carouselDot[1].classList.add("active");
+    } else if (testimonialBelt.style.transform == "translateX(-66.66%)") {
+        carouselDot[2].classList.add("active");
+    }
+}
