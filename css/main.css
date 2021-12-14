@@ -3,7 +3,9 @@
     --marble: #f4f4f4;
     --midnight: #1B273A;
     --oaktree: #C5A686;
-    --deep-gradient: linear-gradient(var(--midnight), #000)
+    --deep-gradient: linear-gradient(var(--midnight), #000);
+    /*Margin*/
+    --margin: 120px;
 }
 
 /* FUNDAMENTALS */
@@ -16,6 +18,7 @@
 html {
     height: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -114,17 +117,18 @@ button:hover {
 
 /* NAV */
 nav {
-    height: 120px;
+    height: var(--margin);
     width: 100%;
     display: block;
     position: fixed;
     z-index: 5;
     transition: .2s;
+    z-index: 100;
 }
 
 #nav-logo {
     width: 90px;
-    margin-left: 120px;
+    margin-left: var(--margin);
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -136,7 +140,7 @@ nav {
 }
 
 .navlinks1 {
-    margin-right: 120px;
+    margin-right: var(--margin);
     justify-content: space-between;
     width: 60%;
     display: flex;
@@ -231,7 +235,7 @@ nav {
         border-top: 7px solid #f4f4f4;
         border-right: 7px solid #f4f4f4;
         border-bottom: 7px solid #f4f4f4;
-        margin-right: 120px;
+        margin-right: var(--margin);
         position: absolute;
         right: 0;
         top: 55%;
@@ -246,12 +250,12 @@ nav {
         height: 100vh;
         position: relative;
         padding: 2vh 0;
-        top: 120px;
+        top: var(--margin);
     }
 
     .burger1 li,
     .burger2 li {
-        margin-left: 120px;
+        margin-left: var(--margin);
         width: 65%;
         transition: 0.2s;
         display: table;
@@ -297,7 +301,7 @@ nav {
 
     .somelinks {
         width: 50px;
-        margin-left: 120px;
+        margin-left: var(--margin);
     }
 
     .somelink img {
@@ -332,7 +336,7 @@ nav {
 
     .news-input {
         width: 50px;
-        margin: 10px 0 0 120px;
+        margin: 10px 0 0 var(--margin);
         border: none;
     }
 
@@ -594,7 +598,7 @@ nav {
 
 #projects {
     background: #FFF;
-    padding: 120px 120px 1px;
+    padding: var(--margin) var(--margin) 1px;
 }
 
 #projects button {
@@ -602,7 +606,7 @@ nav {
 }
 
 #projects section {
-    margin-bottom: 120px;
+    margin-bottom: var(--margin);
     position: relative;
     height: 80vh;
 }
@@ -616,7 +620,7 @@ nav {
 }
 
 .project-left .project-image {
-    width: calc(50% - 120px);
+    width: calc(50% - var(--margin));
     overflow: hidden;
     height: 80vh;
     position: relative;
@@ -649,7 +653,7 @@ nav {
 }
 
 .project-right .project-image {
-    width: calc(50% - 120px);
+    width: calc(50% - var(--margin));
     overflow: hidden;
     height: 80vh;
     position: absolute;
@@ -681,38 +685,60 @@ nav {
     bottom: 0;
 }
 
+#projects .center-button {
+    margin-top: 0;
+    margin-bottom: var(--margin);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* END OF PROJECTS */
 
 /* START OF TESTIMONIALS */
 #testimonials {
-    min-height: 100vh;
     background: var(--marble);
     position: relative;
-    margin: 120px;
+    margin: var(--margin);
+}
+
+.testimonial-content {
+    position: relative;
 }
 
 .testimonial-image {
-    width: calc(50% - 120px);
+    width: calc(50% - var(--margin));
     height: 60vh;
-    background: red;
     position: absolute;
+    overflow: hidden;
+}
+
+/* The image itself */
+#testimonial-image {
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 110%;
+    max-width: 110%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s;
 }
 
 .testimonial-quote {
     width: 50%;
     height: 60vh;
-    background: darkblue;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     left: 50%;
 }
 
 #testimonial-belt {
     width: 300%;
     height: 100%;
-    background: green;
     transform: translateX(0%);
-    transition: .5s ease-in-out;
+    transition: 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 .testimonial-arrow {
@@ -721,6 +747,13 @@ nav {
     transform: translateY(-50%);
     position: absolute;
     z-index: 10;
+    cursor: pointer;
+    transition: .2s;
+    opacity: .8;
+}
+
+.testimonial-arrow:hover {
+    opacity: 1;
 }
 
 #testimonial-arrow-right {
@@ -732,23 +765,34 @@ nav {
     position: relative;
     height: 100%;
     float: left;
+    padding: calc(var(--margin) * 1.5) var(--margin) 0;
 }
 
-.testimonial-1 {
-    background: red;
+.testimonial-part h3 span {
+    color: #B4B8BE;
 }
 
-.testimonial-2 {
-    background: yellow;
+.testimonial-part h3 span:nth-child(odd) {
+    margin-left: -25px;
 }
 
-.testimonial-3 {
-    background: green;
+.testimonial-part h3 {
+    font-size: 3.125em;
+    line-height: 1;
+}
+
+.testimonial-part h4 {
+    font-size: 15px;
+    line-height: 1.25;
+    text-transform: none;
+    letter-spacing: 0px;
+    font-weight: 900;
 }
 
 .carousel-dots {
     position: absolute;
     bottom: 0;
+    left: var(--margin);
 }
 
 .carousel-dot {
@@ -763,13 +807,6 @@ nav {
 
 .carousel-dot.active {
     background: var(--midnight);
-}
-
-.testimonial-content {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 /* END OF TESTIMONIALS */
@@ -793,8 +830,8 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 240px);
-    height: calc(100% - 240px);
+    width: calc(100% - var(--margin)*2);
+    height: calc(100% - var(--margin)*2);
     cursor: pointer;
 }
 
@@ -803,8 +840,8 @@ nav {
     top: 50%;
     left: -1px;
     transform: translateY(-50%);
-    width: calc(100% - 120px);
-    height: calc(100% - 240px);
+    width: calc(100% - var(--margin));
+    height: calc(100% - var(--margin) * 2);
     background: #FFF;
     transition: .2s ease-out;
 }
@@ -824,7 +861,7 @@ nav {
     background: var(--midnight);
     position: absolute;
     bottom: 12.5px;
-    right: 120px;
+    right: var(--margin);
     opacity: 0;
     transition: .2s ease-out;
 }
@@ -838,8 +875,8 @@ nav {
 }
 
 #contact-c2a .marble-background:hover .negative-space {
-    width: calc(100% - 150px);
-    height: calc(100% - 300px);
+    width: calc(100% - var(--margin) - var(--margin) / 2);
+    height: calc(100% - var(--margin) * 4);
 }
 
 #contact-c2a .marble-background:hover .c2a-arrow {
@@ -857,7 +894,7 @@ nav {
 }
 
 footer {
-    padding: 120px;
+    padding: var(--margin);
     background: var(--deep-gradient);
     display: flex;
 }
@@ -880,12 +917,15 @@ footer input {
 }
 
 footer button {
-    border: 3px solid var(--oaktree);
-    color: #FFF;
     margin-top: 10px;
 }
 
-footer button:hover {
+button.oak-button {
+    border: 3px solid var(--oaktree);
+    color: #FFF;
+}
+
+button.oak-button:hover {
     background: var(--oaktree)
 }
 
@@ -900,3 +940,41 @@ footer button:hover {
 }
 
 /* END OF FOOTER */
+
+
+
+
+
+/* RESPONSIVE TABLET 1200x800px */
+
+@media only screen and (max-width: 1200px) {
+    :root {
+        --margin: 50px;
+    }
+
+    .project-text {
+        font-size: 2em;
+        line-height: 1px;
+    }
+
+    #projects section h2 {
+        margin-bottom: var(--margin);
+    }
+
+    #projects section h3 {
+        margin-bottom: 10px;
+    }
+
+    .project-left .project-text {
+        height: 70%;
+    }
+
+    .project-right .project-text {
+        height: 70%;
+    }
+
+    .testimonial-part h3 {
+        font-size: 2.5em;
+        line-height: 1;
+    }
+}

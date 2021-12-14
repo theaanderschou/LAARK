@@ -82,6 +82,7 @@ window.addEventListener('scroll', function () {
 var testimonialBelt = document.getElementById("testimonial-belt");
 var rightTestimonialArrow = document.getElementById("testimonial-arrow-right");
 var leftTestimonialArrow = document.getElementById("testimonial-arrow-left");
+var testimonialImage = document.getElementById("testimonial-image");
 
 slidePos = 0;
 
@@ -91,6 +92,7 @@ rightTestimonialArrow.addEventListener('click', function () {
     // Set belt transformX to slidePos value + %
     testimonialBelt.style.transform = "translateX(" + slidePos + "%)";
 
+    highlightCarouselDots()
     stopSlider()
 });
 
@@ -100,9 +102,11 @@ leftTestimonialArrow.addEventListener('click', function () {
     // Set belt transformX to slidePos value + %
     testimonialBelt.style.transform = "translateX(" + slidePos + "%)";
 
+    highlightCarouselDots()
     stopSlider()
 });
 
+// Stop slider from going into space
 function stopSlider() {
     if (testimonialBelt.style.transform == "translateX(33.33%)") {
         console.log("Du kan ikke komme længere tilbage");
@@ -127,11 +131,18 @@ for (let i = 0; i < carouselDot.length; i++) {
 }
 
 function highlightCarouselDots() {
+    for (let i = 0; i < carouselDot.length; i++) {
+        carouselDot[i].classList.remove("active");
+    }
+
     if (testimonialBelt.style.transform == "translateX(0%)") {
         carouselDot[0].classList.add("active");
+        testimonialImage.src = "img/persona/kurt.png";
     } else if (testimonialBelt.style.transform == "translateX(-33.33%)") {
         carouselDot[1].classList.add("active");
+        testimonialImage.src = "img/persona/helena.png";
     } else if (testimonialBelt.style.transform == "translateX(-66.66%)") {
         carouselDot[2].classList.add("active");
+        testimonialImage.src = "img/persona/henning.png";
     }
 }
