@@ -176,6 +176,12 @@ nav {
     cursor: pointer;
 }
 
+.solid-menu .burger {
+    border-top: 7px solid var(--midnight);
+    border-right: 7px solid var(--midnight);
+    border-bottom: 7px solid var(--midnight);
+}
+
 @media only screen and (max-width: 1400px) {
     body {
         overflow-x: hidden;
@@ -232,9 +238,9 @@ nav {
         display: block;
         width: 40px;
         height: 25px;
-        border-top: 7px solid #f4f4f4;
-        border-right: 7px solid #f4f4f4;
-        border-bottom: 7px solid #f4f4f4;
+        border-top: 7px solid var(--marble);
+        border-right: 7px solid var(--marble);
+        border-bottom: 7px solid var(--marble);
         margin-right: var(--margin);
         position: absolute;
         right: 0;
@@ -819,13 +825,13 @@ nav {
     position: relative;
 }
 
-.marble-background {
-    background-image: url(../img/marble/marble-1.jpg);
+.wood-background {
+    background-image: url(../img/wood/clean-wood.png);
     background-size: cover;
     background-position: center;
 }
 
-#contact-c2a .marble-background {
+#contact-c2a .wood-background {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -835,7 +841,7 @@ nav {
     cursor: pointer;
 }
 
-#contact-c2a .marble-background .negative-space {
+#contact-c2a .wood-background .negative-space {
     position: absolute;
     top: 50%;
     left: -1px;
@@ -846,7 +852,7 @@ nav {
     transition: .2s ease-out;
 }
 
-#contact-c2a .marble-background .negative-space h2 {
+#contact-c2a .wood-background .negative-space h2 {
     position: absolute;
     font-size: 150px;
     line-height: 1;
@@ -889,8 +895,9 @@ nav {
 
 /* START OF FOOTER */
 
-.top-footer {
+.top-footer.wood-background {
     height: 300px;
+    background-image: url(../img/wood/woodlines.png);
 }
 
 footer {
@@ -952,6 +959,10 @@ button.oak-button:hover {
         --margin: 50px;
     }
 
+    #nav {
+        padding: 50px 0;
+    }
+
     .project-text {
         font-size: 2em;
         line-height: 1px;
@@ -976,5 +987,54 @@ button.oak-button:hover {
     .testimonial-part h3 {
         font-size: 2.5em;
         line-height: 1;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    :root {
+        --margin: 50px;
+    }
+
+    #laark-lottie {
+        width: 200px !important;
+    }
+
+    #projects section {
+        height: inherit;
+    }
+
+    .project-left .project-image,
+    .project-right .project-image {
+        width: 100% !important;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .project-text {
+        width: 100% !important;
+        position: relative !important;
+    }
+
+    .project-left .project-text {
+        left: 0;
+    }
+
+    footer {
+        display: block
+    }
+
+    .top-footer.wood-background {
+        height: 100px;
+    }
+
+    .footer-column .footer-logo {
+        width: 50%;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-left: 0;
+        height: inherit;
+        margin-bottom: calc(var(--margin) / 2);
     }
 }
