@@ -95,7 +95,11 @@ p {
     font-weight: 400;
     font-style: normal;
     font-size: clamp(.8rem, 1vw, 1rem);
-    line-height: 1.5rem;
+    line-height: 1.3rem;
+}
+
+input {
+    font-family: nimbus-sans, sans-serif;
 }
 
 button {
@@ -193,6 +197,10 @@ nav {
     border-bottom: 7px solid var(--midnight);
 }
 
+.no-scroll {
+    overflow-y: hidden;
+}
+
 @media only screen and (max-width: 1400px) {
     body {
         overflow-x: hidden;
@@ -234,6 +242,7 @@ nav {
         background-image: url(/img/arch/burger-pic.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
         z-index: 0;
     }
 
@@ -264,10 +273,11 @@ nav {
     .burger2 {
         display: block;
         width: 50%;
-        height: 100vh;
+        height: 80vh;
         position: relative;
         padding: 2vh 0;
         top: var(--margin);
+        top: 20vh;
     }
 
     .burger1 li,
@@ -1081,6 +1091,14 @@ button.oak-button:hover {
     height: 100vh;
 }
 
+#project-hero.underpage {
+    height: 75vh;
+}
+
+#project-hero.underpage .project-nobis-hero-image {
+    height: 100%;
+}
+
 .project-nobis-hero-image {
     height: 75%;
     background-image: url(../img/hero/nobis-lockerroom.jpeg);
@@ -1472,6 +1490,38 @@ button.oak-button:hover {
     .news-btn {
         left: 0;
         position: relative;
+        transform: translateX(0);
+    }
+
+    /* Burger menu */
+    .burger1 *, .burger2 * {
+        text-align: left !important;
+        font-size: 20px !important;
+    }
+
+    .burgertekst {
+        left: 0;
+        transform: translateX(0);
+        width: 100%;
+    }
+
+    .burger1 li, .burger2 li {
+        width: inherit;
+        margin: 0 var(--margin);
+    }
+
+    .somelinks {
+        left: 0;
+        transform: translateX(0);
+        width: inherit;
+    }
+
+    .somelink {
+        display: inline !important;
+    }
+
+    .news-input {
+        left: 0;
         transform: translateX(0);
     }
 }

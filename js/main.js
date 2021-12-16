@@ -7,6 +7,8 @@ const navslide = () => {
     const navAn = document.querySelector('.burger1');
     const navLinksAn = document.querySelectorAll('.burger1 li');
 
+    var body = document.querySelector("BODY");
+
     function toggleBurger() {
         //Toggle Nav
         nav.classList.toggle('nav-active');
@@ -23,6 +25,7 @@ const navslide = () => {
 
         //Burger Animation
         burger.classList.toggle('toggle');
+        body.classList.toggle('no-scroll');
     }
 
     burger.addEventListener('click', () => {
