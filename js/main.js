@@ -166,10 +166,10 @@ var sortByTransformation = document.getElementById("transformation");
 var sortByResidence = document.getElementById("residence");
 
 var allProjects = document.querySelectorAll(".project");
-var schoolTag = document.querySelectorAll(".school .center-icon");
-var healthTag = document.querySelectorAll(".health .center-icon");
-var transformationTag = document.querySelectorAll(".transformation .center-icon");
-var residenceTag = document.querySelectorAll(".residence .center-icon");
+var schoolTag = document.querySelectorAll(".school");
+var healthTag = document.querySelectorAll(".health");
+var transformationTag = document.querySelectorAll(".transformation");
+var residenceTag = document.querySelectorAll(".residence");
 
 function hideAllProjects() {
     for (let i = 0; i < allProjects.length; i++) {
@@ -219,12 +219,3 @@ sortByResidence.addEventListener('click', function () {
         residenceTag[i].classList.remove("hidden");
     }
 });
-
-var stopSortCross = document.querySelectorAll(".stop-sort");
-for (let i = 0; i < stopSortCross.length; i++) {
-    console.log("asd")
-    stopSortCross[i].addEventListener('click', function () {
-        clearSortButtons();
-
-    })
-}
