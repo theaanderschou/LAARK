@@ -1017,6 +1017,14 @@ button.oak-button:hover {
     transition: .2s;
 }
 
+.project-category.active .center-icon img {
+    filter: invert(76%) sepia(16%) saturate(350%) hue-rotate(350deg) brightness(90%) contrast(91%);
+}
+
+.project-category.active h3 {
+    color: var(--oaktree);
+}
+
 .center-icon:hover img {
     filter: invert(76%) sepia(16%) saturate(350%) hue-rotate(350deg) brightness(90%) contrast(91%);
 }
@@ -1025,8 +1033,196 @@ button.oak-button:hover {
     color: var(--oaktree);
 }
 
+.project.hidden {
+    display: none;
+}
+
+.project-category .stop-sort {
+    height: 30px;
+    width: 30px;
+    background: var(--midnight);
+    position: absolute;
+    left: 62%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: none;
+}
+
+.project-category.active .stop-sort {
+    display: block;
+}
+
+.project-sort-bar .stop-sort img {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
+
+
+
+
+/* PROJECT PAGE NOBIS START */
+
+/* HERO SECTION */
+#project-hero {
+    height: 100vh;
+}
+
+.project-nobis-hero-image {
+    height: 75%;
+    background-image: url(../img/hero/nobis-lockerroom.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.project-nobis-hero-image h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--marble);
+}
+
+.project-nobis-sort-bar {
+    height: 25%;
+    margin: 0 var(--margin);
+    display: flex;
+}
+
+.project-nobis-category {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+.project-nobis-category img {
+    width: 100px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    transition: .2s;
+}
+
+/* END OF HERO SECTION */
+
+
+/* PROJECT NOBIS SECTION */
+#nobis {
+    height: auto;
+    background-color: #fff;
+    padding: var(--margin) var(--margin);
+}
+
+.nobis-header h2,
+.nobis-header h3 {
+    text-align: center;
+}
+
+.nobis-header h3 {
+    margin-bottom: var(--margin);
+}
+
+.main-img {
+    min-height: 65vh;
+    max-height: 100vh;
+    position: relative;
+    background-image: url(../img/hero/efterslaegten-nobis-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: var(--margin);
+}
+
+.project-overview {
+    min-height: 120vh;
+    max-height: 200vh;
+    width: 100%;
+}
+
+.project-nobis-left {
+    width: 50%;
+    height: auto;
+    display: block;
+    float: left;
+    padding-bottom: 10px;
+}
+
+.project-nobis-text {
+    padding-right: var(--margin);
+}
+
+.project-nobis-left p {
+    margin-top: 50px;
+    padding-right: var(--margin);
+
+}
+
+.project-nobis-right {
+    min-height: 65vh;
+    max-height: 200vh;
+    width: 50%;
+    height: auto;
+    float: right;
+}
+
+.proj-pics {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.rightpic1,
+.rightpic2 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.project-end {
+    width: 100%;
+    display: flex;
+}
+
+.rightpic3,
+.rightpic4 {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.rightpic3 {
+    padding-right: 6px;
+}
+
+.rightpic4 {
+    padding-left: 6px;
+}
+
+.similar-projects {
+    min-height: 10vh;
+    max-height: 200vh;
+    width: 100%;
+    margin-top: var(--margin);
+}
+
+.similar-gallery {
+    min-height: 10vh;
+    max-height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.similar-gallery img {
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 
@@ -1066,9 +1262,29 @@ button.oak-button:hover {
         font-size: 2.5em;
         line-height: 1;
     }
+
+    .project-nobis-left,
+    .project-nobis-right {
+        width: 100%;
+    }
+
+    .project-nobis-left p {
+        margin-top: 50px;
+        padding-right: var(--margin);
+        margin-bottom: 50px;
+
+    }
+
+    .project-end {
+        margin-bottom: 50px;
+    }
+
+    .similar-projects {
+        margin-top: var(--margin);
+    }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 500px) {
     :root {
         --margin: 50px;
     }
@@ -1082,7 +1298,36 @@ button.oak-button:hover {
         width: 200px !important;
     }
 
+    h2 {
+        font-size: .65em;
+    }
 
+    #project-hero h2 {
+        font-size: 1.3em;
+    }
+
+    .center-icon img {
+        width: 40px;
+    }
+
+    .center-icon h3 {
+        font-size: .7em;
+    }
+
+    .project-sort-bar {
+        margin: 0 calc(var(--margin)/2)
+    }
+
+    .project-sort-bar {
+        display: block;
+    }
+
+    .project-category {
+        width: 50%;
+        float: left;
+        position: relative;
+        height: 50%;
+    }
 
 
 

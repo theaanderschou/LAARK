@@ -348,8 +348,16 @@
             <div class="footer-column">
                 <h4>Nyhedsbrev</h4>
                 <p>Har du lyst til at få de nyeste nyheder om vores igangværende projekter og vores team, så tilmeld dig vores nyhedsbrev:</p>
-                <input>
-                <button class="oak-button">Tilmeld</button>
+
+                <form action="includes/signup.inc.php" method="POST">
+
+                    <input type="text" name="first_name" placeholder="Firstname">
+                    <input type="text" name="last_name" placeholder="Lastname">
+                    <input type="text" name="email" placeholder="E-mail">
+
+                    <button type="submit" name="submit" class="news-btn">Tilmeld</button>
+
+                </form>
             </div>
         </footer>
 
@@ -362,4 +370,8 @@
 </html>
 
 <script src="js/main.js"></script>
+<script>
+    testimonialSlider()
+
+</script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
