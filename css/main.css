@@ -43,7 +43,8 @@ a,
 ul,
 li,
 div,
-span {
+span,
+button {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -239,7 +240,7 @@ nav {
 
     .nav-active {
         transform: translateX(0%);
-        background-image: url(/img/arch/burger-pic.png);
+        background-image: url(../img/arch/burger-pic.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -1345,6 +1346,17 @@ button.oak-button:hover {
 
     h2 {
         font-size: .65em;
+    }
+
+
+    .solid-menu .burger.toggle {
+        border-top: 7px solid var(--marble);
+        border-right: 7px solid var(--marble);
+        border-bottom: 7px solid var(--marble);
+    }
+
+    .solid-menu a {
+        color: var(--marble);
     }
 
     #project-hero h2 {
